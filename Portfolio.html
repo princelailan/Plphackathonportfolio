@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPortfolio | Joseph Onyango</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-pink: #ff006f;
+            --matrix-green: #00ff4c;
+            --cyber-black: #0a0a0f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #0a0a1f, #000);
+            color: var(--neon-blue);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cyber-frame {
+            width: 90%;
+            max-width: 800px;
+            margin: 2rem 0;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .cyber-frame::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 15px var(--neon-pink);
+            pointer-events: none;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 2rem 0;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .skill-matrix {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .skill-node {
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--neon-pink);
+            background: linear-gradient(to right, 
+                rgba(255, 0, 111, 0.1), 
+                rgba(0, 243, 255, 0.05));
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .skill-node:hover {
+            transform: translateX(20px);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .skill-node::before {
+            content: '⊛';
+            position: absolute;
+            left: -30px;
+            color: var(--matrix-green);
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px var(--matrix-green);
+        }
+
+        .skill-title {
+            color: var(--neon-pink);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-desc {
+            color: var(--neon-blue);
+            line-height: 1.6;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+
+        .social-portal {
+            color: var(--neon-blue);
+            font-size: 2rem;
+            text-align: center;
+            padding: 1rem;
+            border: 2px solid var(--neon-blue);
+            transition: all 0.3s;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .social-portal:hover {
+            background: rgba(0, 243, 255, 0.1);
+            transform: scale(1.2);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .bio {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            border-top: 2px solid var(--matrix-green);
+            border-bottom: 2px solid var(--matrix-green);
+        }
+
+        @media (max-width: 768px) {
+            .cyber-frame {
+                width: 95%;
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>JOSEPH ONYANGO<br><span style="font-size: 0.8em;">CYBER DEVELOPER</span></h1>
+
+    <div class="cyber-frame">
+        <div class="bio">
+            <p>Nairobi-based tech artisan | 2024 Graduate</p>
+            <p>Blending Kenyan creativity with cutting-edge development</p>
+        </div>
+
+        <ul class="skill-matrix">
+            <li class="skill-node">
+                <div class="skill-title">Front-end Alchemy</div>
+                <div class="skill-desc">
+                    Crafting dynamic interfaces with CSS/JavaScript alchemy. 
+                    Transforming code into visual symphonies.
+                </div>
+            </li>
+            
+            <li class="skill-node">
+                <div class="skill-title">Back-end Engineering</div>
+                <div class="skill-desc">
+                    Architecting robust systems with Python/SQL. 
+                    Building digital foundations that withstand time.
+                </div>
+            </li>
+
+            <li class="skill-node">
+                <div class="skill-title">Mobile Fusion</div>
+                <div class="skill-desc">
+                    Kotlin-powered Android solutions merging performance with elegance. 
+                    Native experiences redefined.
+                </div>
+            </li>
+
+            <li class="skill-node">
+                <div class="skill-title">Visual Code Artistry</div>
+                <div class="skill-desc">
+                    Painting digital canvases where functionality dances with aesthetics. 
+                    UI/UX that tells stories.
+                </div>
+            </li>
+
+            <li class="skill-node">
+                <div class="skill-title">Problem Deconstruction</div>
+                <div class="skill-desc">
+                    Analytical mind meets creative solutions. 
+                    Complex challenges dissolved into elegant code.
+                </div>
+            </li>
+        </ul>
+
+        <div class="social-grid">
+            <a href="mailto:jesuspromisesmedia@gmail.com" class="social-portal" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.tiktok.com/@princelailan" class="social-portal" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/prince_lailan" class="social-portal" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/princelailan" class="social-portal" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/joseph-onyango-b98307348" class="social-portal" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://wa.me/message/MFLNQT63QNSKC1" class="social-portal" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100070432659655" class="social-portal" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://x.com/JosephOnyash" class="social-portal" target="_blank">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+    </div>
+</body>
+  </html>
